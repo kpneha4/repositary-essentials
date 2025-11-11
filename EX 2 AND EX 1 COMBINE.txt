@@ -1,0 +1,69 @@
+1. git --version
+docker --version    
+code --version     
+
+2. 
+mkdir git-essentials-lab
+cd git-essentials-lab
+code .           
+
+3. 
+index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Simple Webpage</title>
+</head>
+<body>
+  <h1>Hello from my Webpage!</h1>
+  <p>This is a simple webpage created using HTML and GitHub.</p>
+</body>
+</html>
+
+
+4. 
+README.md
+# Git Essentials Lab
+
+5. 
+Dockerfile
+
+FROM nginx
+COPY index.html /usr/share/nginx/html/index.html
+
+
+6. 
+
+git init
+git config user.name "kpneha4"
+git config user.email "kpneha4@gmail.com"
+git add .
+git commit -m "Initial commit with simple HTML page"
+
+
+7.
+
+GitHub repo- git-essentials-lab
+
+8.
+
+git branch -M main
+git remote add origin https://github.com/kpneha4/git-essentials-lab.git
+git push -u origin main
+
+
+--------------------
+
+9. 
+Docker
+
+
+# build the image
+docker build -t myweb:v1 .
+
+# run container mapping port 8080 to nginx default port 80
+docker run -d -p 8080:80 myweb:v1
+
+# open browser to http://localhost:8080
+
